@@ -32,3 +32,4 @@
 | 4                                    | 2135375646this_is_a_bitcoin_block_of_36069131 | 0000aa75a902be99b1141ba91782a4d1a78d9f8ebc6212cd7f01a267f9aa5b72 | 2s            | 75000             |
 | 5                                    | 903778484this_is_a_bitcoin_block_of_36069131  | 000008e81e5ab3a018c74e8eab7eadad33bf43cb9c57024a123d19cd1b95707e | 9s            | 1000000           |
 | 6                                    | 1644409016this_is_a_bitcoin_block_of_36069131 | 0000002353b6b1505f2719af10ef82c33e0a8a21d627a2ea892383dcfa91d743 | 46s           | 25000000          |
+### From the data, it seems that randomly generating the nonce was more efficeint as for a given k, the program elapsed less time and required a fewer amount of trials in order to return a desired hash value.
