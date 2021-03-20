@@ -13,6 +13,9 @@
 | k = amount of leading zeros          | xS                                            | Hash Value                                                       | Time Elapsed  | Number of Trials  |
 | :----------------------------------: | :-------------------------------------------: | :--------------------------------------------------------------: | :-----------: | :---------------: |
 | 7                                    | 44985403this_is_a_bitcoin_block_of_36069131   | 0000000936023c0b24c6bb843daf446508ea0349c545cdda31d54ae12854ab33 | 3610s         | 1000000000        |  
+### The program was utilizing 3 machines with 12 cores in total. I noticed that as k increased, the amount of trials required to output a desired hash value also increased so I would
+### start at the number of trials for the k-1 set and increment upwards. In general, it appears that the amoount of trials required is around 10^k or greater so I would also different
+### values of trials around this range.
 ## Nonce Generation
 ### Originally the program generates the potential nonce randomly
 ###### val nonce = sc.range(0, trials).mapPartitionsWithIndex((indx, iter) => {
