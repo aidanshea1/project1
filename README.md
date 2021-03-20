@@ -22,7 +22,7 @@
 ### After this modification in the code the program generates the potential nonce from 1 to n (the number of trials)
 ###### val nonce = sc.range(0, trials).mapPartitionsWithIndex((indx, iter) => {
 ######      val rand = new scala.util.Random(indx + seed)
-######      iter.map(x => rand.nextInt(trials))
+######      iter.map(x => rand.nextInt(trials) + 1)
 ######     })
 ## Running the program on my local computer with the modified nonce code
 | k = amount of leading zeros          | xS                                            | Hash Value                                                       | Time Elapsed  | Number of Trials  |
